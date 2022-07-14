@@ -15,9 +15,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private WebView myWebView;
-    private ProgressDialog progressDialog;
-    private boolean error;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         myWebView = (WebView) findViewById(R.id.webview);
         final Activity activity = this;
-        // Enable JavaScript and lets the browser go back
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         myWebView.getSettings().setDomStorageEnabled(true);
-        //myWebView.canGoBack();
         myWebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
