@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 
-            @Override
+          /*  @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error){
                 Toast.makeText(activity, error.getDescription(), Toast.LENGTH_LONG).show();
-            }
+            }*/
         });
 
         // The URL that webview is loading
